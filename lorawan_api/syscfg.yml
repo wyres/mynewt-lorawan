@@ -1,0 +1,36 @@
+syscfg.defs:
+    LORAWAN_TASK_PRIO:
+        description: 'Priority of LoRaWAN task'
+        value: 10
+    LORAWAN_STACK_SIZE:
+        description: 'Stack size of LoRaWAN task'
+        value: 150
+    LORAWAN_API_TASK_PRIO:
+        description: 'Priority of LoRaWAN API task'
+        value: 11
+    LORAWAN_API_STACK_SIZE:
+        description: 'Stack size of LoRaWAN API task'
+        value: 200
+        
+    LORAWAN_API_DEFAULT_MCPS_CONFIRMED:
+        description: 'Default MCPS mode of the stack: Confirmed'
+        value: 1
+        restrictions:
+            - "!LORAWAN_API_DEFAULT_MCPS_UNCONFIRMED"
+    LORAWAN_API_DEFAULT_MCPS_UNCONFIRMED:
+        description: 'Default MCPS mode of the stack: Unconfirmed'
+        value: 0
+        restrictions:
+            - "!LORAWAN_API_DEFAULT_MCPS_CONFIRMED"
+    LORAWAN_API_DEFAULT_DR:
+        description: 'Default DR used by the stack'
+        value: DR_4
+    LORAWAN_API_DEFAULT_NB_TRIALS:
+        description: 'Default number of trials in ack mode / number of Tx in non-ack mode'
+        value: 1
+    LORAWAN_API_TRACE_ACTIVATION:
+        description: 'Allow to print information from the LoRaWAN API'
+        value: 1
+    LORAWAN_API_RETRY_TX_DELAY:
+        description: 'Delay to retry a TX after a duty cycle restriction'
+        value: 10000

@@ -1,0 +1,140 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+syscfg.defs:
+    LORAWAN_REGION_AS923:
+        value: 0
+    LORAWAN_REGION_AU915:
+        value: 0
+    LORAWAN_REGION_CN470:
+        value: 0
+    LORAWAN_REGION_CN779:
+        value: 0
+    LORAWAN_REGION_EU433:
+        value: 0
+    LORAWAN_REGION_EU868:
+        value: 0
+    LORAWAN_REGION_KR920:
+        value: 0
+    LORAWAN_REGION_IN865:
+        value: 0
+    LORAWAN_REGION_US915:
+        value: 0
+    LORAWAN_REGION_US915H:
+        value: 0
+
+# SecureElements available
+    LORAWAN_SE_SOFT:
+        value: 0
+    LORAWAN_SE_TO136:
+        value: 0
+    LORAWAN_SE_STA110:
+        value: 0
+
+# Offset timing (ms) & RxDuration (ms) for the radio setup
+    SX126X_RADIO_WAKEUP_TIME:
+        value: 100
+    SX126X_RADIO_MIN_RX_DURATION:
+        value: 300
+    SX127X_RADIO_WAKEUP_TIME:
+        value: 0
+    SX127X_RADIO_MIN_RX_DURATION:
+        value: 400
+
+# XTAL value callibration for the sx126x
+    SX126X_XTAL_PINA:
+        value: 0
+    SX126X_XTAL_PINB:
+        value: 0
+        
+#DIO SX126X
+    SX1261:
+        description: 'SX1261 presence'
+        value:  0
+    SX1262:
+        description: 'SX1262 presence'
+        value:  0
+    SX126X_DIO_1:
+        value: -1
+    SX126X_RADIO_BUSY:
+        value: -1
+    SX126X_RADIO_DEVICE_SEL:
+        value: -1
+    SX126X_SPI:
+        description: 'SX126X SPI port used (SPI_1 means SPI0)'
+        value: -1
+    SX126X_NSS:
+        value: -1
+    SX126X_RESET:
+        value: -1
+    SX126X_ANT_SWITCH:
+        value: -1
+
+#DIO SX1272
+    SX1272:
+        description: 'SX1272 presence'
+        value:  0
+    SX1272_DIO_0:
+        value: -1
+    SX1272_DIO_1:
+        value: -1
+    SX1272_DIO_2:
+        value: -1
+    SX1272_DIO_3:
+        value: -1
+    SX1272_DIO_4:
+        value: -1
+    SX1272_DIO_5:
+        value: -1
+    SX1272_NSS:
+        value: -1
+    SX1272_SPI:
+        value: -1
+    SX1272_RESET:
+        value: -1
+    
+#DIO SX1276
+    SX1276:
+        description: 'SX1276 presence'
+        value:  0
+    SX1276_DIO_0:
+        value: -1
+    SX1276_DIO_1:
+        value: -1
+    SX1276_DIO_2:
+        value: -1
+    SX1276_DIO_3:
+        value: -1
+    SX1276_DIO_4:
+        value: -1
+    SX1276_DIO_5:
+        value: -1
+    SX1276_NSS:
+        value: -1
+    SX1276_SPI:
+        value: -1
+    SX1276_RESET:
+        value: -1
+
+    # if antenna rf switch is handled by radio itself, leave the following gpio defs as -1
+    # else define either or both. Note the TX one is pulled HIGH for tx, LOW for rx, and the RX one is the inverse
+    RADIO_ANT_SWITCH_TX: 
+        value: -1
+    RADIO_ANT_SWITCH_RX: 
+        value: -1
+
+        

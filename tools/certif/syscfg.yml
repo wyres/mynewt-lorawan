@@ -1,0 +1,13 @@
+syscfg.defs:
+    CERTIF_RX_THREAD_PRIO:
+        description: 'Priority of LoRaWAN Certification RX task'
+        value: 70
+    CERTIF_RX_THREAD_STACK_SIZE:
+        description: 'Stack size of LoRaWAN Certification RX task'
+        value: 128
+    CERTIF_TX_THREAD_PRIO:
+        description: 'Priority of LoRaWAN Certification TX task'
+        value: 60
+    CERTIF_TX_THREAD_STACK_SIZE:
+        description: 'Stack size of LoRaWAN Certification TX task'
+        value: 256
