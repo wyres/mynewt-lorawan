@@ -33,7 +33,7 @@
 #include "LoRaMacCrypto.h"
 #include "LoRaMacTest.h"
 
-#if 1
+#if 0
 extern void log_debug_fn(const char*, ...);
 #define LOG log_debug_fn
 #else
