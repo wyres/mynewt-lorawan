@@ -17,6 +17,7 @@
  * under the License.
  */
 
+#include "os/mynewt.h"
 #include <assert.h>
 
 #include "bsp/bsp.h"

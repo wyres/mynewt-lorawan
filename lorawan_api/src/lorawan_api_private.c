@@ -286,6 +286,7 @@ void lorawan_api_private_init(void){
 
     /* Everything is OK, update the region */
     current_region = region;
+    USEDBYASSERT(status);
 }
 
 static void lorawan_eventq_thread (void* data)

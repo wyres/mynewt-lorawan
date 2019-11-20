@@ -239,6 +239,7 @@ uint8_t SX126xGetPaSelect( uint32_t channel )
     return SX1262;
 #else
     assert(0);
+    return SX1262;  // If asserts are off default to 1262
 #endif
 }
 
