@@ -74,8 +74,9 @@ Gpio_t AntSwitchRx;
 
 void SX1272IoInit( void )
 {
-    GpioInit( &SX1272.Spi.Nss, SPI_0_MASTER_PIN_NSS,/*RADIO_NSS,*/ PIN_OUTPUT, PIN_PUSH_PULL, PIN_PULL_UP, 1 );
-    // Not neccessary to tell gpio wrapper module about these pins (and in fact will generate an assert!)
+    // NSS (SS) must be handled here or doesn't work??
+    GpioInit( &SX1272.Spi.Nss, RADIO_NSS, PIN_OUTPUT, PIN_PUSH_PULL, PIN_PULL_UP, 1 );
+    // Not neccessary to tell gpio wrapper module about these pins (and in fact will generate an assert!) as the SPI driver does them
 //    GpioInit( &SX1272.Spi.Mosi, SPI_0_MASTER_PIN_MOSI, PIN_ALTERNATE_FCT, PIN_PUSH_PULL, PIN_PULL_DOWN, GPIO_AF5_SPI1 );
 //    GpioInit( &SX1272.Spi.Miso, SPI_0_MASTER_PIN_MISO, PIN_ALTERNATE_FCT, PIN_PUSH_PULL, PIN_PULL_DOWN, GPIO_AF5_SPI1 );
 //    GpioInit( &SX1272.Spi.Sclk, SPI_0_MASTER_PIN_SCK, PIN_ALTERNATE_FCT, PIN_PUSH_PULL, PIN_PULL_DOWN, GPIO_AF5_SPI1 );
